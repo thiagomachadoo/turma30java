@@ -47,4 +47,20 @@ public class Produto {
     public void setValor(double valor) {
         this.valor = valor;
     }
+    //METODO
+    public void incluiEstoque(int quantidade){
+        if (quantidade <=0){
+            System.out.println("Quantidade incorreta");
+        }else {
+            this.estoque = this.estoque + quantidade; //metodo para incluir no estoque
+        }
+    }
+    public void retiraEstoque(int quantidade){
+        if(quantidade > estoque){
+            System.out.println("IMPOSSIVEL REALIZAR!!");
+        }else{
+            this.estoque = this.estoque - quantidade; //metodo para retirar do estoque
+
+        }
+    }
 }
