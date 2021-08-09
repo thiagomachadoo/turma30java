@@ -9,7 +9,7 @@ programa
 		inteiro x = 0, y = 0
 		inteiro estoque[minimo] = {10,10,10,10,10,10,10,10,10,10}
 		real valor[minimo] = {500.00,200.00,299.00,300.00,245.00,200.00,140.00,129.00,130.00,140.00}
-		inteiro codigo[minimo] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}, vezes = 0
+		inteiro codigo[minimo] = {"G0-0","G1-1","G2-2","G3-3","G4-4","G5-5","G6-6","G7-7","G8-8","G9-9"}, vezes = 0
 		real valorCompras[minimo]
 		real valorTotal = 0.0, imp = 0.0, valorAtualizado = 0.0
 		cadeia produtos[minimo] = {"Playstation5","Playstation4","FifaUltimate","   XboxOne   "," 	Gta 	  ","Controle PS5","Controle PS4","  Cabo Hdmi  ","  Controle U  ","TecladoGamer"}
@@ -17,6 +17,25 @@ programa
 		caracter dinheiro, cheque, credito, parcelas, juros, notaFiscal, empresa, imposto, totalPagar, confirmacao, novoUser
 		cadeia pag, parc
 		logico user = verdadeiro
+		cadeia user1
+		caracter parar = 'N'
+
+
+		escreva("Digite seu nome: ")
+		leia(user1)
+		escreva("Seja Bem Vindo ",user1," !!!")
+		
+	
+	
+		
+		
+		enquanto (parar != 'S') {
+			escreva("\nDeseja fazer compras S/N: ")
+			leia(parar)
+					
+		}
+		limpa()
+	 	
 
 		enquanto(user == verdadeiro) {
 			escreva ("--------Bem Vindo a Smart Gamer!------------\n")
@@ -257,7 +276,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 6189; 
+ * @POSICAO-CURSOR = 320; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
