@@ -1,6 +1,6 @@
 package Classes;
 
-public class ClasseMae {
+public class Produto {
     //ATRIBUTOS
     protected String produto;
     protected int estoque;
@@ -9,12 +9,7 @@ public class ClasseMae {
 
     //METODOS
 
-    public ClasseMae(String produto,String codigo) {
-        this.produto = produto;
-        this.codigo = codigo;
-    }
-
-    public ClasseMae(String produto, int estoque, String codigo, double valor) {
+    public Produto(String produto, int estoque, String codigo, double valor) {
         super();
         this.produto = produto;
         this.estoque = estoque;
@@ -35,11 +30,11 @@ public class ClasseMae {
     public int getEstoque() {
         return estoque;
     }
-    /*
-    public void setEstoque(Celulares estoque) {
+
+    public void setEstoque(String produto) {
         this.estoque = estoque;
     }
-    */
+
     public String getCodigo() {
         return codigo;
     }
@@ -69,5 +64,6 @@ public class ClasseMae {
             this.estoque -= quantidade;
         }
     }
+
 
 }

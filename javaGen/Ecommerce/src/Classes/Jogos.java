@@ -1,6 +1,6 @@
 package Classes;
 
-public class Jogos extends ClasseMae{
+public class Jogos extends Produto {
     //ATRIBUTOS
     private String nome;
 
