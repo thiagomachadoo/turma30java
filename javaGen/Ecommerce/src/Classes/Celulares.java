@@ -2,37 +2,19 @@ package Classes;
 
 public class Celulares extends Produto {
     //ATRIBUTOS
-    private String marca;
-    private String modelo;
     private String memoria;
 
     //METODOS
 
-    public Celulares(String produto, int estoque, String codigo, double valor, String marca, String modelo) {
+    public Celulares(String produto, int estoque, String codigo, double valor) {
         super(produto, estoque, codigo, valor);
-        this.marca = marca;
         this.memoria = memoria;
-        this.modelo = modelo;
+
     }
 
 
     //CONSTRUTORES
 
-    public String getMarca() {
-        return marca;
-    }
-
-    public void setMarca(String marca) {
-        this.marca = marca;
-    }
-
-    public String getModelo() {
-        return modelo;
-    }
-
-    public void setModelo(String modelo) {
-        this.modelo = modelo;
-    }
 
     public String getMemoria() {
         return memoria;
