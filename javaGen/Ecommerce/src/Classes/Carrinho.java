@@ -6,13 +6,15 @@ public class Carrinho extends Produto{
     private int valorTotal;
     private int auxiliarEstoque;
 
-    //METODOS
-    public Carrinho(String produto, int estoque, String codigo, double valor,String auxiliarCod,int auxiliarEstoque,int valorTotal) {
-        super(produto, estoque, codigo, valor);
+    //CONSTRUTORES
+
+    public Carrinho(String codigo, double valor, String produto, int estoque, String auxiliarCod,int valorTotal,int auxiliarEstoque) {
+        super(codigo, valor, produto, estoque);
         this.auxiliarCod = auxiliarCod;
-        this.auxiliarEstoque = auxiliarEstoque;
         this.valorTotal = valorTotal;
+        this.auxiliarEstoque = auxiliarEstoque;
     }
+
     //ENCAPSULAMENTO
     public String getAuxiliarCod() {
         return auxiliarCod;
@@ -33,7 +35,7 @@ public class Carrinho extends Produto{
     public int getAuxiliarEstoque() {
         return auxiliarEstoque;
     }
-
+        //METODO
     public void setAuxiliarEstoque(int auxiliarEstoque) {
         this.auxiliarEstoque = auxiliarEstoque;
     }
