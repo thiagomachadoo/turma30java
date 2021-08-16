@@ -1,49 +1,79 @@
 package Classes;
 
-public class Carrinho extends Produto{
-    //ATRIBUTOS
-    private String auxiliarCod;
-    private int valorTotal;
-    private int auxiliarEstoque;
+import java.util.ArrayList;
+import java.util.List;
 
-    //CONSTRUTORES
+public class Carrinho {
+    List<Carrinho> carrinho = new ArrayList<>();
+    int contador = 0;
 
-    public Carrinho(String codigo, double valor, String produto, int estoque, String auxiliarCod,int valorTotal,int auxiliarEstoque) {
-        super(codigo, valor, produto, estoque);
-        this.auxiliarCod = auxiliarCod;
-        this.valorTotal = valorTotal;
-        this.auxiliarEstoque = auxiliarEstoque;
+    private String nome;
+    private String codigo;
+    private double valor;
+    private int quantidade;
+
+    public Carrinho() {
+        super();
     }
 
-    //ENCAPSULAMENTO
-    public String getAuxiliarCod() {
-        return auxiliarCod;
+    public Carrinho(String nome, String codigo, double valor, int quantidade) {
+        super();
+        this.nome = nome;
+        this.codigo = codigo;
+        this.valor = valor;
+        this.quantidade = quantidade;
     }
 
-    public void setAuxiliarCod(String auxiliarCod) {
-        this.auxiliarCod = auxiliarCod;
+    public String getNome() {
+        return nome;
     }
 
-    public int getValorTotal() {
-        return valorTotal;
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
-    public void setValorTotal(int valorTotal) {
-        this.valorTotal = valorTotal;
+    public String getCodigo() {
+        return codigo;
     }
 
-    public int getAuxiliarEstoque() {
-        return auxiliarEstoque;
+    public void setCodigo(String codigo) {
+        this.codigo = codigo;
     }
-        //METODO
-    public void setAuxiliarEstoque(int auxiliarEstoque) {
-        this.auxiliarEstoque = auxiliarEstoque;
+
+    public double getValor() {
+        return valor;
     }
-    public void modificarEstoque(int qntd) {
-        if (qntd < auxiliarEstoque) {
-            System.out.println("Estourou o estoque! Impossivel realizar!!");
+
+    public void setValor(double valor) {
+        this.valor = valor;
+    }
+
+    public int getQuantidade() {
+        return quantidade;
+    }
+
+    public void setQuantidade(int quantidade) {
+        this.quantidade = quantidade;
+    }
+
+    public void entraCarrinho(String nome, String codigo, double valor, int quantidade) {
+        if (quantidade == 0) {
+            System.out.println("Digite uma quantidade acima de 0");
         } else {
-            this.auxiliarEstoque += qntd;
+            carrinho.add(new Carrinho(nome, codigo, valor, quantidade));
+
         }
+    }
+
+    public void vemCarrinho() {
+
+        for (Carrinho x : carrinho) {
+            System.out.printf("%d x %s - %.2f\n", x.getQuantidade(), x.getNome(), x.getValor());
+        }
+    }
+
+
+    public void limpar() {
+        carrinho.clear();
     }
 }

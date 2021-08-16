@@ -8,7 +8,6 @@ public class Pet {
 
     //CONSTRUTORES
 
-
     public Pet(String raca) {
         this.raca = raca;
     }
@@ -39,7 +38,7 @@ public class Pet {
     public String getRaca() {
         return raca;
     }
-
+    //METODO
     public void setRaca(String raca) {
         this.raca = raca;
     }
