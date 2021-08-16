@@ -3,8 +3,6 @@ package entities;
 public class Gato extends Pet{
         //ATRIBUTO
     private boolean miadoAlto;//"V" "F"
-        //CONSTRUTOR
-
         //CONSTRUTOR DE SOBRECARGA
     public Gato(String raca, int anoNascimento, boolean miadoAlto) {
         super(raca, anoNascimento);
@@ -18,6 +16,7 @@ public class Gato extends Pet{
     public void setMiadoAlto(boolean miadoAlto) {
         this.miadoAlto = miadoAlto;
     }
+    //metodo
     @Override
     public void emiteSom(){
         if(miadoAlto) {

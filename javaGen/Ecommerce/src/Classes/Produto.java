@@ -1,38 +1,38 @@
 package Classes;
 
-public class Produto {
-    //ATRIBUTOS
-    protected String produto;
-    protected int estoque;
-    protected String codigo;
-    protected double valor;
+    public class Produto {
+    private String nome;
+    private String codigo;
+    private double valor;
+    private int estoque;
 
-    //METODOS
 
-    public Produto(String produto, int estoque, String codigo, double valor) {
+
+    public Produto(String nome, String codigo) {
         super();
-        this.produto = produto;
-        this.estoque = estoque;
-        this.valor = valor;
+        this.nome = nome;
         this.codigo = codigo;
     }
 
-    //ENCAPSULAMENTO -- GETTERS and SETTERS
-
-    public String getProduto() {
-        return produto;
+    public Produto(String nome, String codigo, double valor, int estoque) {
+        super();
+        this.nome = nome;
+        this.codigo = codigo;
+        this.valor = valor;
+        if (estoque < 0) {
+            this.estoque = 0;
+        } else {
+            this.estoque = estoque;
+        }
     }
 
-    public void setProduto(String produto) {
-        this.produto = produto;
+
+        public String getNome() {
+        return nome;
     }
 
-    public int getEstoque() {
-        return estoque;
-    }
-
-    public void setEstoque(String produto) {
-        this.estoque = estoque;
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
     public String getCodigo() {
@@ -50,20 +50,21 @@ public class Produto {
     public void setValor(double valor) {
         this.valor = valor;
     }
-    public void IncluiEstoque(int quantidade){
-        if (quantidade <= 0){
-            System.out.println("Quantidade incorreta. Tente novamente!!");
-        }else{
-            this.estoque += quantidade;
-        }
-    }
-    public void RetiraEstoque(int quantidade){
-        if (quantidade > estoque){
-            System.out.println("Quantidade indisponivel!!");
-        }else{
-            this.estoque -= quantidade;
-        }
+
+    public int getEstoque() {
+        return estoque;
     }
 
+    public void retiraEstoque(int tiraestoque) {
 
+        this.estoque = this.estoque - tiraestoque;
+    }
+
+    public void incluiEstoque(int somaestoque) {
+        if (somaestoque <= 0) {
+            System.out.println("Quantidade invalida");
+        } else {
+            this.estoque = this.estoque + somaestoque;
+        }
+    }
 }
