@@ -1,12 +1,6 @@
 package POO;
 
 public class ExercicioAviao {
-     /*
-    2) Crie uma classe avião e apresente os atributos e métodos referentes
-    esta classe, em seguida crie um objeto avião, defina as instancias deste
-    objeto e apresente as informações deste objeto no console.
-     */
-
 
     //ATRIBUTOS
     private int Poltronas;
@@ -43,3 +37,4 @@ public class ExercicioAviao {
         this.numeracao = numeracao;
     }
 }
+//replicar todos os exercicios de poo que faltam
