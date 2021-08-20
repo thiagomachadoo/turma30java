@@ -76,4 +76,5 @@ public class Carrinho {
     public void limpar() {
         carrinho.clear();
     }
+    //sobrescrever novamente, aplicar
 }
